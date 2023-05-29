@@ -8,8 +8,7 @@ use spc;
 # kreiranje tablica
 create table oblik(
     id int not null primary key auto_increment,
-    naziv char(50),
-    rokTrajanja datetime
+    naziv char(50)
 );
 create table artikal(
     id int not null primary key auto_increment,
@@ -54,6 +53,19 @@ references artikal_oblik (id);
 
 # punjenje baze
 
+# ARTIKAL
+insert into artikal(id,naziv,kategorija,kolicinaUkupna)
+values  (null,'SUGAMADEKS',1,10);
+
+# ARTIKAL_OBLIK
+insert into artikal_oblik(artikal,oblik)
+values  (1,1);
+
+# ARTIKAL_LOKACIJA
+insert into artikal_lokacija(lokacija,kolicinaNaLokaciji,artikal_oblik)
+values  (1,10,1);
+
+# OBLIK
 insert into oblik(id,naziv,rokTrajanja)
 values 	(null,'Otopina za infuziju',null),
         (null,'Sprej',null),
@@ -64,7 +76,7 @@ values 	(null,'Otopina za infuziju',null),
         (null,'Prašak',null),
         (null,'Kapi',null),
         (null,'Ampula',null),
-        (null,'Prašak za otopinu',null),
+        (null,'Prašak za otopinu',null),    
         (null,'Krema',null),
         (null,'Injekcija',null),
         (null,'Screen',null),
@@ -74,6 +86,7 @@ values 	(null,'Otopina za infuziju',null),
         (null,'Kontrast',null),
         (null,'Spirala',null);
 
+# KATEGORIJA
 insert into kategorija(id,naziv)
 values  (null,'Lijekovi'),
         (null,'Infuzije'),
@@ -82,6 +95,7 @@ values  (null,'Lijekovi'),
         (null,'Oštri predmeti'),
         (null,'Razno');
 
+# LOKACIJA
 insert into lokacija(id,naziv)
 values	(null,'Ormar'),
 		(null,'Hladnjak'),
