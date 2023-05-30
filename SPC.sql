@@ -31,8 +31,8 @@ create table lokacija(
 );
 create table artikal_lokacija(
     lokacija int not null,
-    kolicinaNaLokaciji decimal(10,3) not null,
-    artikal_oblik int not null
+    artikal_oblik int not null,
+    kolicinaNaLokaciji decimal(10,3) not null
 );
 
 # kreiranje veza
@@ -53,62 +53,88 @@ references artikal_oblik (id);
 
 # punjenje baze
 
-# ARTIKAL
-insert into artikal(id,naziv,kategorija,kolicinaUkupna)
-values  (null,'SUGAMADEKS',1,10);
-
-# ARTIKAL_OBLIK
-insert into artikal_oblik(artikal,oblik)
-values  (1,1);
-
-# ARTIKAL_LOKACIJA
-insert into artikal_lokacija(lokacija,kolicinaNaLokaciji,artikal_oblik)
-values  (1,10,1);
-
 # OBLIK
-insert into oblik(id,naziv,rokTrajanja)
-values 	(null,'Otopina za infuziju',null),
-        (null,'Sprej',null),
-        (null,'Gel',null),
-        (null,'Otopina za kožu',null),
-        (null,'Tableta',null),
-        (null,'Mast',null),
-        (null,'Prašak',null),
-        (null,'Kapi',null),
-        (null,'Ampula',null),
-        (null,'Prašak za otopinu',null),    
-        (null,'Krema',null),
-        (null,'Injekcija',null),
-        (null,'Screen',null),
-        (null,'Otopina',null),
-        (null,'Listići',null),
-        (null,'Sirup',null),
-        (null,'Kontrast',null),
-        (null,'Spirala',null);
+insert into oblik(id,naziv)
+values (1,'Otopina za infuziju'),
+        (2,'Sprej'),
+        (3,'Gel'),
+        (4,'Otopina za kožu'),
+        (5,'Tableta'),
+        (6,'Mast'),
+        (7,'Prašak'),
+        (8,'Kapi'),
+        (9,'Ampula'),
+        (10,'Prašak za otopinu'),    
+        (11,'Krema'),
+        (12,'Injekcija'),
+        (13,'Screen'),
+        (14,'Otopina'),
+        (15,'Listići'),
+        (16,'Sirup'),
+        (17,'Kontrast'),
+        (18,'Spirala');
 
 # KATEGORIJA
 insert into kategorija(id,naziv)
-values  (null,'Lijekovi'),
-        (null,'Infuzije'),
-        (null,'Endoskopije'),
-        (null,'Dezinfekcija'),
-        (null,'Oštri predmeti'),
-        (null,'Razno');
+values  (1,'Lijekovi'),
+        (2,'Infuzije'),
+        (3,'Endoskopije'),
+        (4,'Dezinfekcija'),
+        (5,'Oštri predmeti'),
+        (6,'Razno');
 
 # LOKACIJA
 insert into lokacija(id,naziv)
-values	(null,'Ormar'),
-		(null,'Hladnjak'),
-		(null,'Derma kolica'),
-		(null,'Kir kolica'),
-		(null,'Ordinacija 1'),
-		(null,'Ordinacija 2'),
-		(null,'Ordinacija 3'),
-		(null,'Ordinacija 4'),
-		(null,'Ordinacija 5'),
-		(null,'Ordinacija 6'),
-		(null,'Ordinacija 7'),
-		(null,'Ordinacija 8'),
-		(null,'Ordinacija 9'),
-		(null,'Ordinacija 10');
+values	(1,'Ormar'),
+		(2,'Hladnjak'),
+		(3,'Derma kolica'),
+		(4,'Kir kolica'),
+		(5,'Ordinacija 1'),
+		(6,'Ordinacija 2'),
+		(7,'Ordinacija 3'),
+		(8,'Ordinacija 4'),
+		(9,'Ordinacija 5'),
+		(10,'Ordinacija 6'),
+		(11,'Ordinacija 7'),
+		(12,'Ordinacija 8'),
+		(13,'Ordinacija 9'),
+		(14,'Ordinacija 10');
 
+# ARTIKAL
+insert into artikal(id,naziv,kategorija,kolicinaUkupna)
+values  (null,'Sugamadeks',1,10),
+		(null,'Paracetamol',1,10),
+		(null,'Thiopental Inresa',1,10),
+		(null,'Dopamin',1,5),
+		(null,'Ca Glukonat',1,5),
+		(null,'Lidokain',1,3),
+		(null,'Metoclopramide',1,10),
+		(null,'Solucortef',1,5),
+		(null,'Optilube',1,11),
+		(null,'Propofol',1,75);
+
+# ARTIKAL_OBLIK
+insert into artikal_oblik(artikal,oblik)
+values  (1,1),
+		(2,1),
+		(3,1),
+		(4,1),
+		(5,1),
+		(6,2),
+		(7,1),
+		(8,1),
+		(9,3),
+		(10,1); 
+
+# ARTIKAL_LOKACIJA
+insert into artikal_lokacija(lokacija,artikal_oblik,kolicinaNaLokaciji)
+values  (1,1,10),
+		(1,2,10),
+		(1,3,10),
+		(1,4,5),
+		(1,5,5),
+		(1,6,3),
+		(1,7,10),
+		(1,8,5),
+		(1,9,11),
+		(1,10,75);
