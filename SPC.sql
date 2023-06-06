@@ -181,7 +181,30 @@ values  (null,'Sugamadeks',1,10),
 		(null,'Bysimin',1,10),
 		(null,'Normabel 5mg',1,30),
 		(null,'Mydraicyl 10mg/ml',1,2),
-		(null,'Gadovist',1,20);
+		(null,'Gadovist',1,20),
+		(null,'Glucosa 10%',2,1),
+		(null,'NaCl 500ml',2,19),
+		(null,'Glucosa 5%',2,7),
+		(null,'Ringer otopina',2,5),
+		(null,'NaCl 1000ml',2,30),
+		(null,'Glucosalina',2,10),
+		(null,'Kliješta za biopsiju',3,34),
+		(null,'Klipse',3,9),
+		(null,'Endolup',3,4),
+		(null,'Omče',3,6),
+		(null,'Injekcije',3,5),
+		(null,'Četkice',3,58),
+		(null,'Papir perilica',3,4),
+		(null,'Rez. filter perilica',3,2),
+		(null,'Filter saug',3,9),
+		(null,'Neutr. elektrode',3,20),
+		(null,'Konek. tube (saug)',3,2),
+		(null,'Voda tube',3,9),
+		(null,'Ventili za endoskop',3,50),
+		(null,'Detergent',3,20),
+		(null,'Kiselina',3,2),
+		(null,'Lužina',3,2),
+		(null,'Škare za endolup',3,1);
 		
 
 # ARTIKAL_OBLIK
@@ -263,7 +286,13 @@ values  (1,19),
 		(75,9),
 		(76,5),
 		(77,8),
-		(78,17);
+		(78,17),
+		(79,14),
+		(80,14),
+		(81,14),
+		(82,14),
+		(83,14),
+		(84,14);
 		
 
 # ARTIKAL_LOKACIJA
@@ -352,4 +381,10 @@ values  (1,1,10),
 		(1,75,10),
 		(1,76,30),
 		(1,77,2),
-		(1,78,20);
+		(1,78,20),
+		(1,79,1),
+		(1,80,19),
+		(1,81,7),
+		(1,82,5),
+		(1,83,30),
+		(1,84,10);
