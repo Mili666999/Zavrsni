@@ -1,9 +1,10 @@
 package model;
 
-public class Artikal extends Kategorija {
+public class Artikal extends Oblik {
 	
 	private String naziv;
 	private float kolicina;
+	private Kategorija kategorija;
 	
 	
 	public String getNaziv() {
@@ -18,5 +19,13 @@ public class Artikal extends Kategorija {
 	public void setKolicina(float kolicina) {
 		this.kolicina = kolicina;
 	}
+	public Kategorija getKategorija() {
+		return kategorija;
+	}
+	public void setKategorija(Kategorija kategorija) {
+		this.kategorija = kategorija;
+	}
+	
+	
 
 }

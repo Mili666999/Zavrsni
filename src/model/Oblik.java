@@ -1,6 +1,6 @@
 package model;
 
-public class Oblik extends Artikal {
+public class Oblik extends Entitet {
 	
 	private String naziv;
 

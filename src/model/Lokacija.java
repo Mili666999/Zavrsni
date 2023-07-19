@@ -1,6 +1,6 @@
 package model;
 
-public class Lokacija extends Oblik {
+public class Lokacija extends Entitet {
 	
 	private String naziv;
 

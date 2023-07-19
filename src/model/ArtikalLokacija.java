@@ -1,8 +1,9 @@
 package model;
 
-public class ArtikalLokacija extends Lokacija {
+public abstract class ArtikalLokacija {
 	
 	private float kolicina;
+	private Lokacija lokacija;
 
 	
 	public float getKolicina() {
@@ -11,6 +12,13 @@ public class ArtikalLokacija extends Lokacija {
 	public void setKolicina(float kolicina) {
 		this.kolicina = kolicina;
 	}
+	public Lokacija getLokacija() {
+		return lokacija;
+	}
+	public void setLokacija(Lokacija lokacija) {
+		this.lokacija = lokacija;
+	}
+	
 	
 
 }
