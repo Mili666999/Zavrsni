@@ -1,6 +1,6 @@
 package model;
 
-public abstract class ArtikalLokacija {
+public  class ArtikalLokacija extends Artikal {
 	
 	private float kolicina;
 	private Lokacija lokacija;
