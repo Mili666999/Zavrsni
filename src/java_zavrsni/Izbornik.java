@@ -4,7 +4,12 @@ import java.util.Scanner;
 
 public class Izbornik {
 	
+	private ObradaKategorija obradaKategorija;
+	private ObradaArtikal obradaArtikal;
+	
 	public Izbornik() {
+		obradaKategorija = new ObradaKategorija();
+		obradaArtikal = new ObradaArtikal();
 		Pomocno.ulaz = new Scanner(System.in);
 		pozdravnaPoruka();
 		prikaziIzbornik();
@@ -18,7 +23,7 @@ public class Izbornik {
 	}
 	
 	private void prikaziIzbornik() {
-		System.out.println("-IZBORNIK-");
+		System.out.println("-GLAVNI IZBORNIK-");
 		System.out.println("1. Artikli");
 		System.out.println("2. Kategorije");
 		System.out.println("3. Oblici");
@@ -32,11 +37,11 @@ public class Izbornik {
 		switch(Pomocno.unosRasponBroja("Odaberi stavku izbornika: ", "Obavezno 1-5",1,5)){
 		
 		case 1:
-			System.out.println("Artikli");
+			obradaArtikal.prikaziIzbornik();
 			prikaziIzbornik();
 			break;
 		case 2:
-			System.out.println("Kategorije");
+			obradaKategorija.prikaziIzbornik();
 			prikaziIzbornik();
 			break;
 		case 3:

@@ -22,6 +22,19 @@ public class Pomocno {
 		}
 		
 	}
+
+	public static String unosString(String poruka, String greska) {
+		String s = "";
+		while(true) {
+			System.out.print(poruka);
+			s = ulaz.nextLine();
+			if(s.trim().length()>0) {
+				return s;
+			}
+			System.out.println(greska);
+		}
+		
+	}
 	
 
 }
