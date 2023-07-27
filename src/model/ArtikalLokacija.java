@@ -2,15 +2,16 @@ package model;
 
 public  class ArtikalLokacija extends Artikal {
 	
-	private float kolicina;
+	private float kolicinaNaLokaciji;
 	private Lokacija lokacija;
 
 	
-	public float getKolicina() {
-		return kolicina;
+	
+	public float getKolicinaNaLokaciji() {
+		return kolicinaNaLokaciji;
 	}
-	public void setKolicina(float kolicina) {
-		this.kolicina = kolicina;
+	public void setKolicinaNaLokaciji(float kolicinaNaLokaciji) {
+		this.kolicinaNaLokaciji = kolicinaNaLokaciji;
 	}
 	public Lokacija getLokacija() {
 		return lokacija;

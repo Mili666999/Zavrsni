@@ -4,10 +4,12 @@ import java.util.ArrayList;
 import java.util.List;
 
 import model.Artikal;
+import model.Kategorija;
 
 public class ObradaArtikal {
 	
 	private List<Artikal> artikli;
+	private Izbornik izbornik;
 	
 	public ObradaArtikal() {
 		artikli = new ArrayList<>();
@@ -48,9 +50,15 @@ public class ObradaArtikal {
 
 	private void dodavanjeArtikla() {
 		Artikal a = new Artikal();
-		
-		
-		
+		a.setId(Pomocno.unosRasponBroja("Unesi šifru artikla: ", "Pozitivan broj", 1, Integer.MAX_VALUE));
+		a.setNaziv(Pomocno.unosString("Unesi naziv artikla: ", "Naziv obavezan"));
+		a.setKolicinaUkupna(Pomocno.unosFloat("Unesi ukupnu količinu (. za decimalni dio): ", "Greška kod unosa"));
+		a.setKategorija(postaviKategoriju());
+		artikli.add(a);
+	}
+
+	private Kategorija postaviKategoriju() {
+		izbornik.getObradaKategorija().pregledKategorija();
 	}
 
 }

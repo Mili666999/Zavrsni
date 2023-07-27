@@ -4,11 +4,13 @@ import java.util.Scanner;
 
 public class Izbornik {
 	
+	private ObradaLokacija obradaLokacija;
 	private ObradaOblik obradaOblik;
 	private ObradaKategorija obradaKategorija;
 	private ObradaArtikal obradaArtikal;
 	
 	public Izbornik() {
+		obradaLokacija = new ObradaLokacija();
 		obradaOblik = new ObradaOblik();
 		obradaKategorija = new ObradaKategorija();
 		obradaArtikal = new ObradaArtikal();
@@ -51,7 +53,7 @@ public class Izbornik {
 			prikaziIzbornik();
 			break;
 		case 4:
-			System.out.println("Lokacije");
+			obradaLokacija.prikaziIzbornik();
 			prikaziIzbornik();
 			break;
 		case 5:
@@ -61,4 +63,5 @@ public class Izbornik {
 		
 	}
 
+	
 }

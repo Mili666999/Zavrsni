@@ -38,12 +38,20 @@ public class ObradaKategorija {
 			break;
 		}
 	}
-
-	private void pregledKategorija() {
+	
+	public void pregledKategorija() {
+		System.out.println("-POPIS KATEGORIJA-");
+		int b=1;
 		for(Kategorija k : kategorije) {
-			System.out.println(k.getNaziv());
+			System.out.println(b++ + ". " + k);
 		}
 	}
+
+//	private void pregledKategorija() {
+//		for(Kategorija k : kategorije) {
+//			System.out.println(k.getNaziv());
+//		}
+//	}
 
 	private void dodavanjeKategorije() {
 		Kategorija k = new Kategorija();

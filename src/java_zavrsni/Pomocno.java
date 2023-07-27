@@ -36,5 +36,16 @@ public class Pomocno {
 		
 	}
 	
+	public static float unosFloat(String poruka, String greska) {
+		while(true) {
+			try {
+				System.out.println(poruka);
+				return Float.parseFloat(ulaz.nextLine());
+			}catch (Exception e) {
+				System.out.println(greska);
+			}
+		}
+	}
+	
 
 }
