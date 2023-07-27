@@ -30,6 +30,7 @@ public class ObradaArtikal {
 		case 1:
 			pregledArtikala();
 			prikaziIzbornik();
+			break;
 		case 2:
 			dodavanjeArtikla();
 			prikaziIzbornik();

@@ -4,10 +4,12 @@ import java.util.Scanner;
 
 public class Izbornik {
 	
+	private ObradaOblik obradaOblik;
 	private ObradaKategorija obradaKategorija;
 	private ObradaArtikal obradaArtikal;
 	
 	public Izbornik() {
+		obradaOblik = new ObradaOblik();
 		obradaKategorija = new ObradaKategorija();
 		obradaArtikal = new ObradaArtikal();
 		Pomocno.ulaz = new Scanner(System.in);
@@ -45,7 +47,7 @@ public class Izbornik {
 			prikaziIzbornik();
 			break;
 		case 3:
-			System.out.println("Oblici");
+			obradaOblik.prikaziIzbornik();
 			prikaziIzbornik();
 			break;
 		case 4:
