@@ -29,7 +29,7 @@ public class ObradaKategorija {
 	}
 
 	private void ucitajStavkuIzbornika() {
-		switch(Pomocno.unosRasponBroja("Odaberi stavku izbornika: ", "Obavezno 1-5", 1, 5)) {
+		switch(Pomocno.unosRasponBroja("Odaberi stavku izbornika: ", "Obavezno 1-5!", 1, 5)) {
 		case 1:
 			pregledKategorija();
 			prikaziIzbornik();
@@ -51,7 +51,6 @@ public class ObradaKategorija {
 		}
 	}
 	
-
 	public void pregledKategorija() {
 		System.out.println("-POPIS KATEGORIJA-");
 		int b=1;
@@ -63,8 +62,8 @@ public class ObradaKategorija {
 
 	private void dodavanjeKategorije() {
 		Kategorija k = new Kategorija();
-		k.setId(Pomocno.unosRasponBroja("Unesi šifru kategorije: ", "Pozitivan broj", 1, Integer.MAX_VALUE));
-		k.setNaziv(Pomocno.unosString("Unesi naziv kategorije: ","Naziv obavezan"));
+		k.setId(Pomocno.unosRasponBroja("Unesi šifru kategorije: ", "Pozitivan broj!", 1, Integer.MAX_VALUE));
+		k.setNaziv(Pomocno.unosString("Unesi naziv kategorije: ","Naziv obavezan!"));
 		kategorije.add(k);
 	}
 

@@ -25,7 +25,7 @@ public class ObradaLokacija {
 	}
 
 	private void ucitajStavkuIzbornika() {
-		switch(Pomocno.unosRasponBroja("Odaberi stavku izbornka", "Obavezno 1-5", 1, 5)) {
+		switch(Pomocno.unosRasponBroja("Odaberi stavku izbornka: ", "Obavezno 1-5!", 1, 5)) {
 		case 1:
 			pregledLokacija();
 			prikaziIzbornik();
@@ -34,22 +34,47 @@ public class ObradaLokacija {
 			dodavanjeLokacije();
 			prikaziIzbornik();
 			break;
+		case 3:
+			promjenaLokacije();
+			prikaziIzbornik();
+			break;
+		case 4:
+			brisanjeLokacije();
+			prikaziIzbornik();
+			break;
 		case 5:
 			break;
 		}
 	}
 
 	private void pregledLokacija() {
+		System.out.println("-POPIS LOKACIJA-");
+		int b=1;
 		for(Lokacija l : lokacije) {
-			System.out.println(l.getNaziv());
+			System.out.println(b++ + ". " + l);
 		}
+		System.out.println("****************");
 	}
 	
 	private void dodavanjeLokacije() {
 		Lokacija l = new Lokacija();
-		l.setId(Pomocno.unosRasponBroja("Unesi šifru lokacije", "Pozitivan broj", 1, Integer.MAX_VALUE));
-		l.setNaziv(Pomocno.unosString("Unesi naziv lokacije", "Naziv obavezan"));
+		l.setId(Pomocno.unosRasponBroja("Unesi šifru lokacije: ", "Pozitivan broj!", 1, Integer.MAX_VALUE));
+		l.setNaziv(Pomocno.unosString("Unesi naziv lokacije: ", "Naziv obavezan!"));
 		lokacije.add(l);
+	}
+	
+	private void promjenaLokacije() {
+		pregledLokacija();
+		int index = Pomocno.unosRasponBroja("Odaberi redni broj lokacije: ", "NIje dobar odabir!", 1, lokacije.size());
+		Lokacija l = lokacije.get(index-1);
+		l.setId(Pomocno.unosRasponBroja("Unesi šifru lokacije (" + l.getId() + "): ", "Nije dobar odabir!", 1, lokacije.size()));
+		l.setNaziv(Pomocno.unosString("Unesi naziv lokacije (" + l.getNaziv() + "): ", "Nije dobar odabir!"));
+	}
+	
+	private void brisanjeLokacije() {
+		pregledLokacija();
+		int index = Pomocno.unosRasponBroja("Odaberi redni broj lokacije: ", "NIje dobar odabir!", 1, lokacije.size());
+		lokacije.remove(index-1);
 	}
 
 }

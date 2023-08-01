@@ -7,7 +7,6 @@ public class Artikal extends Oblik {
 	private Kategorija kategorija;
 	
 	
-	
 	public String getNaziv() {
 		return naziv;
 	}

@@ -25,7 +25,7 @@ public class ObradaOblik {
 	}
 
 	private void ucitajStavkuIzbornika() {
-		switch(Pomocno.unosRasponBroja("Odaberi stavku izbornika: ", "Obavezno 1-5", 1, 5)) {
+		switch(Pomocno.unosRasponBroja("Odaberi stavku izbornika: ", "Obavezno 1-5!", 1, 5)) {
 		case 1:
 			pregledOblika();
 			prikaziIzbornik();
@@ -58,8 +58,8 @@ public class ObradaOblik {
 	
 	private void dodavanjeOblika() {
 		Oblik o = new Oblik();
-		o.setId(Pomocno.unosRasponBroja("Unesi šifru oblika: ", "Pozitivan broj", 1, Integer.MAX_VALUE));
-		o.setNaziv(Pomocno.unosString("Unesi naziv oblika: ", "Naziv obavezan"));
+		o.setId(Pomocno.unosRasponBroja("Unesi šifru oblika: ", "Pozitivan broj!", 1, Integer.MAX_VALUE));
+		o.setNaziv(Pomocno.unosString("Unesi naziv oblika: ", "Naziv obavezan!"));
 		oblici.add(o);
 	}
 
