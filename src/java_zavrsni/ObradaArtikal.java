@@ -17,7 +17,7 @@ public class ObradaArtikal {
 	}
 	
 	public void prikaziIzbornik() {
-		System.out.println("-ARTIKLI-");
+		System.out.println("---ARTIKLI---");
 		System.out.println("1. Pregled artikala");
 		System.out.println("2. Unos novog artikla");
 		System.out.println("3. Izmjena postojećeg artikla");
@@ -59,6 +59,8 @@ public class ObradaArtikal {
 
 	private Kategorija postaviKategoriju() {
 		izbornik.getObradaKategorija().pregledKategorija();
+		int index = Pomocno.unosRasponBroja("Odaberi redni broj kategorije: ", "Nije dobar odabir", 1, izbornik.getObradaKategorija().getKategorije().size());
+		return izbornik.getObradaKategorija().getKategorije().get(index-1);
 	}
 
 }

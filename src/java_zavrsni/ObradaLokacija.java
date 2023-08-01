@@ -15,7 +15,7 @@ public class ObradaLokacija {
 	}
 	
 	public void prikaziIzbornik() {
-		System.out.println("-LOKACIJE-");
+		System.out.println("---LOKACIJE---");
 		System.out.println("1. Pregled lokacija");
 		System.out.println("2. Unos nove lokacije");
 		System.out.println("3. Izmjena postojeće lokacije");

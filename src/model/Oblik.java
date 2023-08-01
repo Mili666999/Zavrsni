@@ -13,5 +13,6 @@ public class Oblik extends Entitet {
 	}
 	
 	
+	
 
 }

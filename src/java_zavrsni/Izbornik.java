@@ -32,7 +32,7 @@ public class Izbornik {
 		System.out.println("2. Kategorije");
 		System.out.println("3. Oblici");
 		System.out.println("4. Lokacije");
-		System.out.println("5. Izlaz");
+		System.out.println("5. IZLAZ");
 		ucitajStavkuIzbornika();
 	}
 
@@ -63,5 +63,17 @@ public class Izbornik {
 		
 	}
 
+	public ObradaKategorija getObradaKategorija() {
+		return obradaKategorija;
+	}
+	public ObradaLokacija getObradaLokacija() {
+		return obradaLokacija;
+	}
+	public ObradaOblik getObradaOblik() {
+		return obradaOblik;
+	}
+	public ObradaArtikal getObradaArtikal() {
+		return obradaArtikal;
+	}
 	
 }
