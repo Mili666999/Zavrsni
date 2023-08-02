@@ -4,7 +4,6 @@ public class Kategorija extends Entitet {
 	
 	private String naziv;
 
-	
 	public String getNaziv() {
 		return naziv;
 	}

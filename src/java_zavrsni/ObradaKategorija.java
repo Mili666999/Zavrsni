@@ -8,6 +8,7 @@ import model.Kategorija;
 public class ObradaKategorija {
 	
 	private List<Kategorija> kategorije;
+	private Izbornik izbornik;
 	
 	public List<Kategorija> getKategorije(){
 		return kategorije;
@@ -15,7 +16,11 @@ public class ObradaKategorija {
 	
 	public ObradaKategorija() {
 		kategorije = new ArrayList<>();
+	}	
 		
+	public ObradaKategorija(Izbornik izbornik) {
+		this();
+		this.izbornik = izbornik;
 	}
 	
 	public void prikaziIzbornik() {
