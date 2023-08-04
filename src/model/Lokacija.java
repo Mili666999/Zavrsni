@@ -3,8 +3,17 @@ package model;
 public class Lokacija extends Entitet {
 	
 	private String naziv;
-
 	
+	
+	public Lokacija() {
+		
+	}
+	public Lokacija(String naziv) {
+		super();
+		this.naziv = naziv;
+	}
+
+
 	public String getNaziv() {
 		return naziv;
 	}

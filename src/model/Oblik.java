@@ -3,8 +3,17 @@ package model;
 public class Oblik extends Entitet {
 	
 	private String naziv;
-
 	
+	
+	public Oblik() {
+		
+	}
+	public Oblik(String naziv) {
+		super();
+		this.naziv = naziv;
+	}
+
+
 	public String getNaziv() {
 		return naziv;
 	}

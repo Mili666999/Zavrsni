@@ -8,12 +8,27 @@ public class Izbornik {
 	private ObradaOblik obradaOblik;
 	private ObradaKategorija obradaKategorija;
 	private ObradaArtikal obradaArtikal;
+
+
+	public ObradaKategorija getObradaKategorija() {
+		return obradaKategorija;
+	}
+	public ObradaLokacija getObradaLokacija() {
+		return obradaLokacija;
+	}
+	public ObradaOblik getObradaOblik() {
+		return obradaOblik;
+	}
+	public ObradaArtikal getObradaArtikal() {
+		return obradaArtikal;
+	}
+	
 	
 	public Izbornik() {
 		obradaLokacija = new ObradaLokacija();
 		obradaOblik = new ObradaOblik();
 		obradaKategorija = new ObradaKategorija();
-		obradaArtikal = new ObradaArtikal();
+		obradaArtikal = new ObradaArtikal(this);
 		Pomocno.ulaz = new Scanner(System.in);
 		pozdravnaPoruka();
 		prikaziIzbornik();
@@ -60,20 +75,5 @@ public class Izbornik {
 			System.out.println("Doviđenja");
 			break;
 		}
-		
 	}
-
-	public ObradaKategorija getObradaKategorija() {
-		return obradaKategorija;
-	}
-	public ObradaLokacija getObradaLokacija() {
-		return obradaLokacija;
-	}
-	public ObradaOblik getObradaOblik() {
-		return obradaOblik;
-	}
-	public ObradaArtikal getObradaArtikal() {
-		return obradaArtikal;
-	}
-	
 }

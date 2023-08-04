@@ -7,6 +7,17 @@ public class Artikal extends Oblik {
 	private Kategorija kategorija;
 	
 	
+	public Artikal() {
+		
+	}
+	public Artikal(String naziv, float kolicinaUkupna, Kategorija kategorija) {
+		super();
+		this.naziv = naziv;
+		this.kolicinaUkupna = kolicinaUkupna;
+		this.kategorija = kategorija;
+	}
+
+
 	public String getNaziv() {
 		return naziv;
 	}

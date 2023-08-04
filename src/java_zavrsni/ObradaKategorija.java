@@ -8,7 +8,6 @@ import model.Kategorija;
 public class ObradaKategorija {
 	
 	private List<Kategorija> kategorije;
-	private Izbornik izbornik;
 	
 	public List<Kategorija> getKategorije(){
 		return kategorije;
@@ -17,12 +16,8 @@ public class ObradaKategorija {
 	public ObradaKategorija() {
 		kategorije = new ArrayList<>();
 	}	
-		
-	public ObradaKategorija(Izbornik izbornik) {
-		this();
-		this.izbornik = izbornik;
-	}
 	
+
 	public void prikaziIzbornik() {
 		System.out.println("---KATEGORIJE---");
 		System.out.println("1. Pregled kategorija");
@@ -85,5 +80,4 @@ public class ObradaKategorija {
 		int index = Pomocno.unosRasponBroja("Odaberi redni broj kategorije: ", "Nije dobar odabir!", 1, kategorije.size());
 		kategorije.remove(index-1);
 	}
-
 }

@@ -3,6 +3,16 @@ package model;
 public class Kategorija extends Entitet {
 	
 	private String naziv;
+	
+	
+	public Kategorija() {
+		
+	}
+	public Kategorija(String naziv) {
+		super();
+		this.naziv = naziv;
+	}
+
 
 	public String getNaziv() {
 		return naziv;

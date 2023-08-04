@@ -15,7 +15,12 @@ public class ObradaArtikal {
 		artikli = new ArrayList<>();
 		
 	}
-	
+
+	public ObradaArtikal(Izbornik izbornik) {
+		this();
+		this.izbornik = izbornik;
+	}
+
 	public void prikaziIzbornik() {
 		System.out.println("---ARTIKLI---");
 		System.out.println("1. Pregled artikala");
@@ -61,7 +66,7 @@ public class ObradaArtikal {
 
 	private void dodavanjeArtikla() {
 		Artikal a = new Artikal();
-		a.setId(Pomocno.unosRasponBroja("Unesi šifru artikla: ", "Pozitivan broj", 1, Integer.MAX_VALUE));
+		a.setId(Pomocno.unosRasponBroja("Unesi šifru artikla: ", "Pozitivan broj!", 1, Integer.MAX_VALUE));
 		a.setNaziv(Pomocno.unosString("Unesi naziv artikla: ", "Naziv obavezan!"));
 		a.setKolicinaUkupna(Pomocno.unosFloat("Unesi ukupnu količinu (. za decimalni dio): ", "Greška kod unosa!"));
 		a.setKategorija(postaviKategoriju());
