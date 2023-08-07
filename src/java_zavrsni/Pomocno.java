@@ -47,5 +47,10 @@ public class Pomocno {
 		}
 	}
 	
+	public static boolean unosBoolean(String poruka) {
+		System.out.println(poruka);
+		return ulaz.nextLine().trim().toLowerCase().equals("da") ? true : false;
+	}
+	
 
 }

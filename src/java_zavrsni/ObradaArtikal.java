@@ -59,7 +59,7 @@ public class ObradaArtikal {
 		System.out.println("-POPIS ARTIKALA-");
 		int b=1;
 		for(Artikal a : artikli) {
-			System.out.println(b++ + ". " + a);
+			System.out.println(b++ + ". " + a.getNaziv());
 		}
 		System.out.println("*****************");
 	}
@@ -69,8 +69,22 @@ public class ObradaArtikal {
 		a.setId(Pomocno.unosRasponBroja("Unesi šifru artikla: ", "Pozitivan broj!", 1, Integer.MAX_VALUE));
 		a.setNaziv(Pomocno.unosString("Unesi naziv artikla: ", "Naziv obavezan!"));
 		a.setKolicinaUkupna(Pomocno.unosFloat("Unesi ukupnu količinu (. za decimalni dio): ", "Greška kod unosa!"));
-		a.setKategorija(postaviKategoriju());
+		izbornik.getObradaKategorija().pregledKategorija();
+		a.setKategorije(postaviKategorije());
 		artikli.add(a);
+	}
+
+
+	private List<Kategorija> postaviKategorije() {
+		List<Kategorija> kategorije = new ArrayList<>();
+		if(Pomocno.unosRasponBroja("Koristiti postojeću - 1, Dodati novu - 2: ", "NIje dobar odabir!", 1, 2)==1) {
+			kategorije.add(postaviKategoriju());
+		}
+		else{
+			izbornik.getObradaKategorija().dodavanjeKategorije();
+			kategorije.add(postaviKategoriju());
+		}
+		return kategorije;
 	}
 
 	private Kategorija postaviKategoriju() {
@@ -86,8 +100,9 @@ public class ObradaArtikal {
 		a.setId(Pomocno.unosRasponBroja("Unesi šifru artikla: (" + a.getId() + "): ", "Nije dobar odabir!", 1, artikli.size()));
 		a.setNaziv(Pomocno.unosString("Unesi naziv artikla (" + a.getNaziv() + "): ", "Naziv obavezan!"));
 		a.setKolicinaUkupna(Pomocno.unosFloat("Unesi ukupnu količinu (. za decimalni dio): (" + a.getKolicinaUkupna() + "): ", "Greška kod unosa!"));
-		//System.out.println("Trenutna kategorija: " +  );
-		a.setKategorija(postaviKategoriju());
+		System.out.println("Trenutna kategorija: " + a.getKategorije());
+		postaviKategoriju();
+		
 	}
 	
 	private void brisanjeArtikla() {

@@ -60,7 +60,7 @@ public class ObradaKategorija {
 		System.out.println("******************");
 	}
 
-	private void dodavanjeKategorije() {
+	public void dodavanjeKategorije() {
 		Kategorija k = new Kategorija();
 		k.setId(Pomocno.unosRasponBroja("Unesi šifru kategorije: ", "Pozitivan broj!", 1, Integer.MAX_VALUE));
 		k.setNaziv(Pomocno.unosString("Unesi naziv kategorije: ","Naziv obavezan!"));
@@ -69,7 +69,7 @@ public class ObradaKategorija {
 
 	private void promjenaKategorije() {
 		pregledKategorija();
-		int index = Pomocno.unosRasponBroja("Odaberi redni broj kategorije: ", "Nije dobar odabir!", 1, kategorije.size());
+		int index = Pomocno.unosRasponBroja("Odaberi redni broj kategorije: " , "Nije dobar odabir!", 1, kategorije.size());
 		Kategorija k = kategorije.get(index-1);
 		k.setId(Pomocno.unosRasponBroja("Unesi šifru kategorije (" + k.getId() + "): ", "Pozitivan broj!", 1, Integer.MAX_VALUE));
 		k.setNaziv(Pomocno.unosString("Unesi naziv kategorije (" + k.getNaziv() + "): ", "Naziv obavezan!"));

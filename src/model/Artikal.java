@@ -1,21 +1,24 @@
 package model;
 
-public class Artikal extends Oblik {
+import java.util.List;
+
+public class Artikal extends Entitet {
 	
 	private String naziv;
 	private float kolicinaUkupna;
-	private Kategorija kategorija;
+	private List<Kategorija> kategorije;
 	
 	
 	public Artikal() {
-		
+		super();
 	}
-	public Artikal(String naziv, float kolicinaUkupna, Kategorija kategorija) {
+	public Artikal(String naziv, float kolicinaUkupna, List<Kategorija> kategorije) {
 		super();
 		this.naziv = naziv;
 		this.kolicinaUkupna = kolicinaUkupna;
-		this.kategorija = kategorija;
+		this.kategorije = kategorije;
 	}
+
 
 
 	public String getNaziv() {
@@ -30,12 +33,15 @@ public class Artikal extends Oblik {
 	public void setKolicinaUkupna(float kolicinaUkupna) {
 		this.kolicinaUkupna = kolicinaUkupna;
 	}
-	public Kategorija getKategorija() {
-		return kategorija;
+	public List<Kategorija> getKategorije() {
+		return kategorije;
 	}
-	public void setKategorija(Kategorija kategorija) {
-		this.kategorija = kategorija;
+	public void setKategorije(List<Kategorija> kategorije) {
+		this.kategorije = kategorije;
 	}
+	
+	
+	
 	
 	
 
