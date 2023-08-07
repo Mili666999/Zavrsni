@@ -10,7 +10,7 @@ public class Artikal extends Entitet {
 	
 	
 	public Artikal() {
-		super();
+		
 	}
 	public Artikal(String naziv, float kolicinaUkupna, List<Kategorija> kategorije) {
 		super();
@@ -18,7 +18,6 @@ public class Artikal extends Entitet {
 		this.kolicinaUkupna = kolicinaUkupna;
 		this.kategorije = kategorije;
 	}
-
 
 
 	public String getNaziv() {
@@ -40,9 +39,4 @@ public class Artikal extends Entitet {
 		this.kategorije = kategorije;
 	}
 	
-	
-	
-	
-	
-
 }

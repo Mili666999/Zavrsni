@@ -1,0 +1,42 @@
+package model;
+
+import java.util.List;
+
+public class AOL extends Artikal {
+	
+	private float kolicinaNaLokaciji;
+	private List<Oblik> oblici;
+	private List<Lokacija> lokacije;
+	
+	public AOL() {
+		
+	}
+	public AOL(String naziv, float kolicinaUkupna, List<Kategorija> kategorije, float kolicinaNaLokaciji,
+			List<Oblik> oblici, List<Lokacija> lokacije) {
+		super(naziv, kolicinaUkupna, kategorije);
+		this.kolicinaNaLokaciji = kolicinaNaLokaciji;
+		this.oblici = oblici;
+		this.lokacije = lokacije;
+	}
+
+
+	public float getKolicinaNaLokaciji() {
+		return kolicinaNaLokaciji;
+	}
+	public void setKolicinaNaLokaciji(float kolicinaNaLokaciji) {
+		this.kolicinaNaLokaciji = kolicinaNaLokaciji;
+	}
+	public List<Oblik> getOblici() {
+		return oblici;
+	}
+	public void setOblici(List<Oblik> oblici) {
+		this.oblici = oblici;
+	}
+	public List<Lokacija> getLokacije() {
+		return lokacije;
+	}
+	public void setLokacije(List<Lokacija> lokacije) {
+		this.lokacije = lokacije;
+	}
+	
+}

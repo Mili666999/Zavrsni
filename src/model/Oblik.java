@@ -25,5 +25,4 @@ public class Oblik extends Entitet {
 		return naziv;
 	}
 	
-
 }
