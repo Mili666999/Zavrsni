@@ -11,7 +11,6 @@ public class ObradaOblik {
 	
 	public ObradaOblik() {
 		oblici = new ArrayList<>();
-		
 	}
 	
 	public void prikaziIzbornik() {

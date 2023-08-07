@@ -13,7 +13,6 @@ public class ObradaArtikal {
 	
 	public ObradaArtikal() {
 		artikli = new ArrayList<>();
-		
 	}
 
 	public ObradaArtikal(Izbornik izbornik) {
@@ -70,12 +69,12 @@ public class ObradaArtikal {
 		a.setNaziv(Pomocno.unosString("Unesi naziv artikla: ", "Naziv obavezan!"));
 		a.setKolicinaUkupna(Pomocno.unosFloat("Unesi ukupnu količinu (. za decimalni dio): ", "Greška kod unosa!"));
 		izbornik.getObradaKategorija().pregledKategorija();
-		a.setKategorije(postaviKategorije());
+		a.setKategorije(ucitavanjeKategorije());
 		artikli.add(a);
 	}
 
 
-	private List<Kategorija> postaviKategorije() {
+	private List<Kategorija> ucitavanjeKategorije() {
 		List<Kategorija> kategorije = new ArrayList<>();
 		if(Pomocno.unosRasponBroja("Koristiti postojeću - 1, Dodati novu - 2: ", "NIje dobar odabir!", 1, 2)==1) {
 			kategorije.add(postaviKategoriju());

@@ -11,7 +11,6 @@ public class ObradaLokacija {
 	
 	public ObradaLokacija() {
 		lokacije = new ArrayList<>();
-		
 	}
 	
 	public void prikaziIzbornik() {
