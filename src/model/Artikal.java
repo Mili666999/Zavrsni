@@ -2,7 +2,7 @@ package model;
 
 import java.util.List;
 
-public class Artikal extends Entitet {
+public class Artikal extends AOL {
 	
 	private String naziv;
 	private float kolicinaUkupna;
@@ -12,8 +12,9 @@ public class Artikal extends Entitet {
 	public Artikal() {
 		
 	}
-	public Artikal(String naziv, float kolicinaUkupna, List<Kategorija> kategorije) {
-		super();
+	public Artikal(float kolicinaNaLokaciji, List<Oblik> oblici, List<Lokacija> lokacije, String naziv,
+			float kolicinaUkupna, List<Kategorija> kategorije) {
+		super(kolicinaNaLokaciji, oblici, lokacije);
 		this.naziv = naziv;
 		this.kolicinaUkupna = kolicinaUkupna;
 		this.kategorije = kategorije;
