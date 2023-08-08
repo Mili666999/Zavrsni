@@ -76,7 +76,7 @@ public class ObradaArtikal {
 
 	private List<Kategorija> ucitavanjeKategorije() {
 		List<Kategorija> kategorije = new ArrayList<>();
-		if(Pomocno.unosRasponBroja("Koristiti postojeću - 1, Dodati novu - 2: ", "NIje dobar odabir!", 1, 2)==1) {
+		if(Pomocno.unosRasponBroja("Koristiti postojeću - 1, Dodati novu - 2: ", "Nije dobar odabir!", 1, 2)==1) {
 			kategorije.add(postaviKategoriju());
 		}
 		else{

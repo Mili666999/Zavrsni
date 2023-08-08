@@ -8,6 +8,7 @@ public class Izbornik {
 	private ObradaOblik obradaOblik;
 	private ObradaKategorija obradaKategorija;
 	private ObradaArtikal obradaArtikal;
+	private ObradaAOL obradaAOL;
 
 
 	public ObradaKategorija getObradaKategorija() {
@@ -22,6 +23,9 @@ public class Izbornik {
 	public ObradaArtikal getObradaArtikal() {
 		return obradaArtikal;
 	}
+	public ObradaAOL getObradaAOL() {
+		return obradaAOL;
+	}
 	
 	
 	public Izbornik() {
@@ -29,6 +33,7 @@ public class Izbornik {
 		obradaOblik = new ObradaOblik();
 		obradaKategorija = new ObradaKategorija();
 		obradaArtikal = new ObradaArtikal(this);
+		obradaAOL = new ObradaAOL(this);
 		Pomocno.ulaz = new Scanner(System.in);
 		pozdravnaPoruka();
 		prikaziIzbornik();

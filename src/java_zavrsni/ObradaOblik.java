@@ -9,6 +9,10 @@ public class ObradaOblik {
 	
 	private List<Oblik> oblici;
 	
+	public List<Oblik> getOblici() {
+		return oblici;
+	}
+
 	public ObradaOblik() {
 		oblici = new ArrayList<>();
 	}
@@ -46,7 +50,7 @@ public class ObradaOblik {
 		}
 	}
 
-	private void pregledOblika() {
+	public void pregledOblika() {
 		System.out.println("-POPIS OBLIKA-");
 		int b=1;
 		for(Oblik o : oblici) {
@@ -55,7 +59,7 @@ public class ObradaOblik {
 		System.out.println("***************");
 	}
 	
-	private void dodavanjeOblika() {
+	public void dodavanjeOblika() {
 		Oblik o = new Oblik();
 		o.setId(Pomocno.unosRasponBroja("Unesi šifru oblika: ", "Pozitivan broj!", 1, Integer.MAX_VALUE));
 		o.setNaziv(Pomocno.unosString("Unesi naziv oblika: ", "Naziv obavezan!"));

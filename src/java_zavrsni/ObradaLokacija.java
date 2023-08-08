@@ -9,6 +9,10 @@ public class ObradaLokacija {
 	
 	private List<Lokacija> lokacije;
 	
+	public List<Lokacija> getLokacije() {
+		return lokacije;
+	}
+
 	public ObradaLokacija() {
 		lokacije = new ArrayList<>();
 	}
@@ -46,7 +50,7 @@ public class ObradaLokacija {
 		}
 	}
 
-	private void pregledLokacija() {
+	public void pregledLokacija() {
 		System.out.println("-POPIS LOKACIJA-");
 		int b=1;
 		for(Lokacija l : lokacije) {
@@ -55,7 +59,7 @@ public class ObradaLokacija {
 		System.out.println("****************");
 	}
 	
-	private void dodavanjeLokacije() {
+	public void dodavanjeLokacije() {
 		Lokacija l = new Lokacija();
 		l.setId(Pomocno.unosRasponBroja("Unesi šifru lokacije: ", "Pozitivan broj!", 1, Integer.MAX_VALUE));
 		l.setNaziv(Pomocno.unosString("Unesi naziv lokacije: ", "Naziv obavezan!"));
