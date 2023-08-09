@@ -15,10 +15,19 @@ public class ObradaOblik {
 
 	public ObradaOblik() {
 		oblici = new ArrayList<>();
+		if(Pomocno.DEV) {
+			testisi();
+		}
 	}
 	
+	private void testisi() {
+		oblici.add(new Oblik("Tablete"));
+		oblici.add(new Oblik("Sirup"));
+		oblici.add(new Oblik("Sprej"));
+	}
+
 	public void prikaziIzbornik() {
-		System.out.println("---OBLICI---");
+		System.out.println("\n---OBLICI---");
 		System.out.println("1. Pregled oblika");
 		System.out.println("2. Unos novog oblika");
 		System.out.println("3. Izmjena postojećeg oblika");
@@ -51,7 +60,7 @@ public class ObradaOblik {
 	}
 
 	public void pregledOblika() {
-		System.out.println("-POPIS OBLIKA-");
+		System.out.println("\n-POPIS OBLIKA-");
 		int b=1;
 		for(Oblik o : oblici) {
 			System.out.println(b++ + ". " + o);

@@ -15,11 +15,19 @@ public class ObradaKategorija {
 	
 	public ObradaKategorija() {
 		kategorije = new ArrayList<>();
+		if(Pomocno.DEV) {
+			testisi();
+		}
 	}	
 	
+	private void testisi() {
+		kategorije.add(new Kategorija("Lijekovi"));
+		kategorije.add(new Kategorija("Dezinfekcija"));
+		kategorije.add(new Kategorija("Oštri predmeti"));
+	}
 
 	public void prikaziIzbornik() {
-		System.out.println("---KATEGORIJE---");
+		System.out.println("\n---KATEGORIJE---");
 		System.out.println("1. Pregled kategorija");
 		System.out.println("2. Unos nove kategorije");
 		System.out.println("3. Izmjena postojeće kategorije");
@@ -52,7 +60,7 @@ public class ObradaKategorija {
 	}
 	
 	public void pregledKategorija() {
-		System.out.println("-POPIS KATEGORIJA-");
+		System.out.println("\n-POPIS KATEGORIJA-");
 		int b=1;
 		for(Kategorija k : kategorije) {
 			System.out.println(b++ + ". " + k);

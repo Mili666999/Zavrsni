@@ -15,10 +15,19 @@ public class ObradaLokacija {
 
 	public ObradaLokacija() {
 		lokacije = new ArrayList<>();
+		if(Pomocno.DEV) {
+			testisi();
+		}
 	}
 	
+	private void testisi() {
+		lokacije.add(new Lokacija("Ormar"));
+		lokacije.add(new Lokacija("Hladnjak"));
+		lokacije.add(new Lokacija("Ordinacija"));
+	}
+
 	public void prikaziIzbornik() {
-		System.out.println("---LOKACIJE---");
+		System.out.println("\n---LOKACIJE---");
 		System.out.println("1. Pregled lokacija");
 		System.out.println("2. Unos nove lokacije");
 		System.out.println("3. Izmjena postojeće lokacije");
@@ -51,7 +60,7 @@ public class ObradaLokacija {
 	}
 
 	public void pregledLokacija() {
-		System.out.println("-POPIS LOKACIJA-");
+		System.out.println("\n-POPIS LOKACIJA-");
 		int b=1;
 		for(Lokacija l : lokacije) {
 			System.out.println(b++ + ". " + l);

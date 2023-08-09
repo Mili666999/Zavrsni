@@ -10,10 +10,12 @@ public class ObradaArtikal {
 	
 	private List<Artikal> artikli;
 	private Izbornik izbornik;
-	
+		
 	public ObradaArtikal() {
 		artikli = new ArrayList<>();
 	}
+
+	
 
 	public ObradaArtikal(Izbornik izbornik) {
 		this();
@@ -21,7 +23,7 @@ public class ObradaArtikal {
 	}
 
 	public void prikaziIzbornik() {
-		System.out.println("---ARTIKLI---");
+		System.out.println("\n---ARTIKLI---");
 		System.out.println("1. Pregled artikala");
 		System.out.println("2. Unos novog artikla");
 		System.out.println("3. Izmjena postojećeg artikla");
@@ -55,7 +57,7 @@ public class ObradaArtikal {
 	}
 
 	private void pregledArtikala() {
-		System.out.println("-POPIS ARTIKALA-");
+		System.out.println("\n-POPIS ARTIKALA-");
 		int b=1;
 		for(Artikal a : artikli) {
 			System.out.println(b++ + ". " + a.getNaziv());
@@ -68,11 +70,15 @@ public class ObradaArtikal {
 		a.setId(Pomocno.unosRasponBroja("Unesi šifru artikla: ", "Pozitivan broj!", 1, Integer.MAX_VALUE));
 		a.setNaziv(Pomocno.unosString("Unesi naziv artikla: ", "Naziv obavezan!"));
 		a.setKolicinaUkupna(Pomocno.unosFloat("Unesi ukupnu količinu (. za decimalni dio): ", "Greška kod unosa!"));
+		System.out.println("Unesi kategoriju...");
 		izbornik.getObradaKategorija().pregledKategorija();
 		a.setKategorije(ucitavanjeKategorije());
 		artikli.add(a);
+		if(a.getKategorije().toString().toLowerCase().replace("[","" ).replace("]", "").equals("lijekovi")) {
+			izbornik.getObradaAOL().dodavanjeAOL();
+		}
 	}
-
+	
 
 	private List<Kategorija> ucitavanjeKategorije() {
 		List<Kategorija> kategorije = new ArrayList<>();
@@ -99,8 +105,9 @@ public class ObradaArtikal {
 		a.setId(Pomocno.unosRasponBroja("Unesi šifru artikla: (" + a.getId() + "): ", "Nije dobar odabir!", 1, artikli.size()));
 		a.setNaziv(Pomocno.unosString("Unesi naziv artikla (" + a.getNaziv() + "): ", "Naziv obavezan!"));
 		a.setKolicinaUkupna(Pomocno.unosFloat("Unesi ukupnu količinu (. za decimalni dio): (" + a.getKolicinaUkupna() + "): ", "Greška kod unosa!"));
-		System.out.println("Trenutna kategorija: " + a.getKategorije());
-		postaviKategoriju();
+		System.out.println("Trenutna kategorija: " + a.getKategorije().toString());
+		izbornik.getObradaKategorija().pregledKategorija();
+		a.setKategorije(ucitavanjeKategorije());
 		
 	}
 	

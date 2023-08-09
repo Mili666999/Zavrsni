@@ -41,13 +41,13 @@ public class Izbornik {
 	}
 	
 	private void pozdravnaPoruka() {
-		System.out.println("*************");
-		System.out.println("***SoCoPaN***");
-		System.out.println("*************");
+		System.out.println("*****************");
+		System.out.println("*****SoCoPaN*****");
+		System.out.println("*****************");
 	}
 	
 	private void prikaziIzbornik() {
-		System.out.println("-GLAVNI IZBORNIK-");
+		System.out.println("\n-GLAVNI IZBORNIK-");
 		System.out.println("1. Artikli");
 		System.out.println("2. Kategorije");
 		System.out.println("3. Oblici");

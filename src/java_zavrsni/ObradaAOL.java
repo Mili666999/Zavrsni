@@ -21,14 +21,16 @@ public class ObradaAOL {
 		this.izbornik = izbornik;
 	}
 	
-	private void dodavanjeAOL() {
+	public void dodavanjeAOL() {
 		AOL a = new AOL();
-		a.setId(Pomocno.unosRasponBroja("Unesi šifru: ", "Pozitivan broj!", 1, Integer.MAX_VALUE));
-		a.setKolicinaNaLokaciji(Pomocno.unosFloat("Unesi količinu na lokaciji (. za decimalni dio): ", "Greška kod unosa!"));
-		izbornik.getObradaOblik().pregledOblika();
-		a.setOblici(ucitavanjeOblika());
+		//a.setId(Pomocno.unosRasponBroja("Unesi šifru: ", "Pozitivan broj!", 1, Integer.MAX_VALUE));
+		System.out.println("Unesi lokaciju lijeka...");
 		izbornik.getObradaLokacija().pregledLokacija();
 		a.setLokacije(ucitavanjeLokacija());
+		a.setKolicinaNaLokaciji(Pomocno.unosFloat("Unesi količinu na lokaciji (. za decimalni dio): ", "Greška kod unosa!"));
+		System.out.println("Unesi oblik lijeka...");
+		izbornik.getObradaOblik().pregledOblika();
+		a.setOblici(ucitavanjeOblika());
 		aoli.add(a);
 	}
 
