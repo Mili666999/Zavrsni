@@ -60,7 +60,8 @@ public class ObradaArtikal {
 		System.out.println("\n-POPIS ARTIKALA-");
 		int b=1;
 		for(Artikal a : artikli) {
-			System.out.println(b++ + ". " + a.getNaziv() + "/" + a.getKolicinaUkupna() + "/" + a.getKategorije().toString().replace("[","" ).replace("]", ""));
+			System.out.println(b++ + ". " + a.getNaziv() + "/" + a.getKolicinaUkupna() + "/" + a.getKategorije().toString().replace("[","" ).replace("]", "") +"/"
+			+ a.getLokacije() +"/"+ a.getKolicinaNaLokaciji() +"/"+ a.getOblici());
 		}
 		System.out.println("*****************");
 	}
