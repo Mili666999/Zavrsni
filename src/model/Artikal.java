@@ -8,10 +8,10 @@ public class Artikal extends AOL {
 	private float kolicinaUkupna;
 	private List<Kategorija> kategorije;
 	
-	
 	public Artikal() {
 		
 	}
+
 	public Artikal(float kolicinaNaLokaciji, List<Oblik> oblici, List<Lokacija> lokacije, String naziv,
 			float kolicinaUkupna, List<Kategorija> kategorije) {
 		super(kolicinaNaLokaciji, oblici, lokacije);

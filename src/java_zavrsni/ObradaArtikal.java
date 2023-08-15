@@ -5,34 +5,17 @@ import java.util.List;
 
 import model.Artikal;
 import model.Kategorija;
-import model.Lokacija;
-import model.Oblik;
 
 public class ObradaArtikal {
 	
 	private List<Artikal> artikli;
-	private List<Lokacija> lokacije;
-	private List<Oblik> oblici;
 	private Izbornik izbornik;
 	
-	public List<Lokacija> getLokacije(){
-		return lokacije;
-	}
-	
-	public List<Oblik> getOblici(){
-		return oblici;
-	}
 		
 	public ObradaArtikal() {
 		artikli = new ArrayList<>();
-		if(Pomocno.DEV) {
-			testniPodaci();
-		}
 	}
 
-	private void testniPodaci() {
-		artikli.add(new Artikal());
-	}
 
 	public ObradaArtikal(Izbornik izbornik) {
 		this();

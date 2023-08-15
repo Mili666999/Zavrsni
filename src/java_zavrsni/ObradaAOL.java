@@ -12,6 +12,7 @@ public class ObradaAOL {
 	private List<Artikal> artikli;
 	private Izbornik izbornik;
 	
+	
 	public ObradaAOL() {
 		artikli = new ArrayList<>();
 	}
