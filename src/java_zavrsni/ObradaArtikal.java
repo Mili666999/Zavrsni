@@ -5,6 +5,7 @@ import java.util.List;
 
 import model.Artikal;
 import model.Kategorija;
+//import model.Lokacija;
 
 public class ObradaArtikal {
 	
@@ -15,7 +16,6 @@ public class ObradaArtikal {
 	public ObradaArtikal() {
 		artikli = new ArrayList<>();
 	}
-
 
 	public ObradaArtikal(Izbornik izbornik) {
 		this();
@@ -57,6 +57,7 @@ public class ObradaArtikal {
 	}
 
 	private void pregledArtikala() {
+		//List<Lokacija> lokacije = new ArrayList<>();
 		System.out.println("\n-POPIS ARTIKALA-");
 		int b=1;
 		for(Artikal a : artikli) {
