@@ -3,18 +3,18 @@ package java_zavrsni;
 import java.util.ArrayList;
 import java.util.List;
 
-import model.Artikal;
+import model.AOL;
 import model.Lokacija;
 import model.Oblik;
 
 public class ObradaAOL {
 	
-	private List<Artikal> artikli;
 	private Izbornik izbornik;
+	private List<AOL> aoli;
 	
 	
 	public ObradaAOL() {
-		artikli = new ArrayList<>();
+		aoli = new ArrayList<>();
 	}
 	
 	public ObradaAOL(Izbornik izbornik) {
@@ -22,8 +22,10 @@ public class ObradaAOL {
 		this.izbornik = izbornik;
 	}
 	
+	
+
 	public void dodavanjeAOL() {
-		Artikal a = new Artikal();
+		AOL a = new AOL();
 		//a.setId(Pomocno.unosRasponBroja("Unesi šifru: ", "Pozitivan broj!", 1, Integer.MAX_VALUE));
 		System.out.println("Unesi lokaciju lijeka...");
 		izbornik.getObradaLokacija().pregledLokacija();
@@ -32,7 +34,7 @@ public class ObradaAOL {
 		System.out.println("Unesi oblik lijeka...");
 		izbornik.getObradaOblik().pregledOblika();
 		a.setOblici(ucitavanjeOblika());
-		artikli.add(a);
+		aoli.add(a);
 	}
 
 

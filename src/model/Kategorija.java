@@ -8,6 +8,7 @@ public class Kategorija extends Entitet {
 	public Kategorija() {
 		
 	}
+	
 	public Kategorija(String naziv) {
 		super();
 		this.naziv = naziv;

@@ -3,18 +3,21 @@ package java_zavrsni;
 import java.util.ArrayList;
 import java.util.List;
 
+import model.AOL;
 import model.Artikal;
 import model.Kategorija;
-//import model.Lokacija;
+
 
 public class ObradaArtikal {
 	
 	private List<Artikal> artikli;
+	private List<AOL> aoli;
 	private Izbornik izbornik;
 	
 		
 	public ObradaArtikal() {
 		artikli = new ArrayList<>();
+		aoli = new ArrayList<>();
 	}
 
 	public ObradaArtikal(Izbornik izbornik) {
@@ -57,12 +60,13 @@ public class ObradaArtikal {
 	}
 
 	private void pregledArtikala() {
-		//List<Lokacija> lokacije = new ArrayList<>();
 		System.out.println("\n-POPIS ARTIKALA-");
 		int b=1;
 		for(Artikal a : artikli) {
-			System.out.println(b++ + ". " + a.getNaziv() + "/" + a.getKolicinaUkupna() + "/" + a.getKategorije().toString().replace("[","" ).replace("]", "") +"/"
-			+ a.getLokacije() +"/"+ a.getKolicinaNaLokaciji() +"/"+ a.getOblici());
+			System.out.println(b++ + ". " + a.getNaziv() + "/" + a.getKolicinaUkupna() + "/" + a.getKategorije().toString().replace("[","" ).replace("]", ""));
+		}
+		for(AOL a : aoli) {
+			System.out.println(a.getLokacije().get(b) + "/" + a.getKolicinaNaLokaciji() + "/" + a.getOblici().get(b));
 		}
 		System.out.println("*****************");
 	}

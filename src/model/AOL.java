@@ -11,6 +11,7 @@ public class AOL extends Entitet {
 	public AOL() {
 		
 	}
+	
 	public AOL(float kolicinaNaLokaciji, List<Oblik> oblici, List<Lokacija> lokacije) {
 		super();
 		this.kolicinaNaLokaciji = kolicinaNaLokaciji;
