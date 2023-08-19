@@ -4,6 +4,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 import model.AOL;
+import model.Artikal;
 import model.Lokacija;
 import model.Oblik;
 
@@ -11,10 +12,13 @@ public class ObradaAOL {
 	
 	private Izbornik izbornik;
 	private List<AOL> aoli;
+	private List<Artikal> artikli;
 	
 	
 	public ObradaAOL() {
 		aoli = new ArrayList<>();
+		artikli = new ArrayList<>();
+		
 	}
 	
 	public ObradaAOL(Izbornik izbornik) {
@@ -26,7 +30,7 @@ public class ObradaAOL {
 
 	public void dodavanjeAOL() {
 		AOL a = new AOL();
-		//a.setId(Pomocno.unosRasponBroja("Unesi šifru: ", "Pozitivan broj!", 1, Integer.MAX_VALUE));
+		a.setId(artikli.size()-1);
 		System.out.println("Unesi lokaciju lijeka...");
 		izbornik.getObradaLokacija().pregledLokacija();
 		a.setLokacije(ucitavanjeLokacija());

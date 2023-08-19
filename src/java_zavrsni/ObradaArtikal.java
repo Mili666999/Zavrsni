@@ -14,7 +14,10 @@ public class ObradaArtikal {
 	private List<AOL> aoli;
 	private Izbornik izbornik;
 	
-		
+	public List<AOL> getAoli() {
+		return aoli;
+	}
+
 	public ObradaArtikal() {
 		artikli = new ArrayList<>();
 		aoli = new ArrayList<>();
@@ -64,9 +67,6 @@ public class ObradaArtikal {
 		int b=1;
 		for(Artikal a : artikli) {
 			System.out.println(b++ + ". " + a.getNaziv() + "/" + a.getKolicinaUkupna() + "/" + a.getKategorije().toString().replace("[","" ).replace("]", ""));
-		}
-		for(AOL a : aoli) {
-			System.out.println(a.getLokacije().get(b) + "/" + a.getKolicinaNaLokaciji() + "/" + a.getOblici().get(b));
 		}
 		System.out.println("*****************");
 	}
