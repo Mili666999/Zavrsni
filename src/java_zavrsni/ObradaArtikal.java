@@ -80,8 +80,16 @@ public class ObradaArtikal {
 		izbornik.getObradaKategorija().pregledKategorija();
 		a.setKategorije(ucitavanjeKategorije());
 		if(a.getKategorije().toString().toLowerCase().replace("[","" ).replace("]", "").equals("lijekovi")) {
-			izbornik.getObradaAOL().dodavanjeAOL();
+			
+			List<AOL> aols = new ArrayList<>();
+			aols.add(izbornik.getObradaAOL().dodavanjeAOL());
+			
+			a.setAol(aols);
+			// ugraditi da li želite dodati još
 		}
+		
+		
+		
 		artikli.add(a);
 	}
 	

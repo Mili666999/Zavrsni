@@ -2,23 +2,18 @@ package model;
 
 import java.util.List;
 
-public class Artikal extends AOL {
+public class Artikal extends Entitet  {
 	
 	private String naziv;
 	private float kolicinaUkupna;
 	private List<Kategorija> kategorije;
+	private List<AOL> aol;
 	
 	public Artikal() {
 		
 	}
 
-	public Artikal(float kolicinaNaLokaciji, List<Oblik> oblici, List<Lokacija> lokacije, String naziv,
-			float kolicinaUkupna, List<Kategorija> kategorije) {
-		super(kolicinaNaLokaciji, oblici, lokacije);
-		this.naziv = naziv;
-		this.kolicinaUkupna = kolicinaUkupna;
-		this.kategorije = kategorije;
-	}
+
 
 
 	public String getNaziv() {
@@ -39,5 +34,23 @@ public class Artikal extends AOL {
 	public void setKategorije(List<Kategorija> kategorije) {
 		this.kategorije = kategorije;
 	}
+
+
+
+
+	public List<AOL> getAol() {
+		return aol;
+	}
+
+
+
+
+	public void setAol(List<AOL> aol) {
+		this.aol = aol;
+	}
+
+
+
+
 	
 }

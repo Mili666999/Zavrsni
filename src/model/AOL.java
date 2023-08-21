@@ -5,37 +5,34 @@ import java.util.List;
 public class AOL extends Entitet {
 	
 	private float kolicinaNaLokaciji;
-	private List<Oblik> oblici;
-	private List<Lokacija> lokacije;
+	private Oblik oblici;
+	private Lokacija lokacije;
 	
 	public AOL() {
 		
 	}
-	
-	public AOL(float kolicinaNaLokaciji, List<Oblik> oblici, List<Lokacija> lokacije) {
-		super();
-		this.kolicinaNaLokaciji = kolicinaNaLokaciji;
-		this.oblici = oblici;
-		this.lokacije = lokacije;
-	}
-
 
 	public float getKolicinaNaLokaciji() {
 		return kolicinaNaLokaciji;
 	}
+
 	public void setKolicinaNaLokaciji(float kolicinaNaLokaciji) {
 		this.kolicinaNaLokaciji = kolicinaNaLokaciji;
 	}
-	public List<Oblik> getOblici() {
+
+	public Oblik getOblici() {
 		return oblici;
 	}
-	public void setOblici(List<Oblik> oblici) {
+
+	public void setOblici(Oblik oblici) {
 		this.oblici = oblici;
 	}
-	public List<Lokacija> getLokacije() {
+
+	public Lokacija getLokacije() {
 		return lokacije;
 	}
-	public void setLokacije(List<Lokacija> lokacije) {
+
+	public void setLokacije(Lokacija lokacije) {
 		this.lokacije = lokacije;
 	}
 	
