@@ -13,10 +13,18 @@ public class Artikal extends Entitet  {
 		
 	}
 
+	public Artikal(int id, String naziv, float kolicinaUkupna, List<Kategorija> kategorije, List<AOL> aol) {
+		super(id);
+		this.naziv = naziv;
+		this.kolicinaUkupna = kolicinaUkupna;
+		this.kategorije = kategorije;
+		this.aol = aol;
+	}
+
+
 	public String getNaziv() {
 		return naziv;
 	}
-	
 	
 	public void setNaziv(String naziv) {
 		this.naziv = naziv;

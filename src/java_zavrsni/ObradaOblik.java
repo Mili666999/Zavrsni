@@ -7,6 +7,7 @@ import model.Oblik;
 
 public class ObradaOblik {
 	
+	private int id = Pomocno.DEV ? 4 : 1;
 	private List<Oblik> oblici;
 	
 	public List<Oblik> getOblici() {
@@ -21,9 +22,9 @@ public class ObradaOblik {
 	}
 	
 	private void testisi() {
-		oblici.add(new Oblik("Tablete"));
-		oblici.add(new Oblik("Sirup"));
-		oblici.add(new Oblik("Sprej"));
+		oblici.add(new Oblik(1,"Tablete"));
+		oblici.add(new Oblik(2,"Sirup"));
+		oblici.add(new Oblik(3,"Sprej"));
 	}
 
 	public void prikaziIzbornik() {
@@ -70,7 +71,7 @@ public class ObradaOblik {
 	
 	public void dodavanjeOblika() {
 		Oblik o = new Oblik();
-		o.setId(Pomocno.unosRasponBroja("Unesi šifru oblika: ", "Pozitivan broj!", 1, Integer.MAX_VALUE));
+		o.setId(id++);
 		o.setNaziv(Pomocno.unosString("Unesi naziv oblika: ", "Naziv obavezan!"));
 		oblici.add(o);
 	}
@@ -79,7 +80,7 @@ public class ObradaOblik {
 		pregledOblika();
 		int index = Pomocno.unosRasponBroja("Odaberi redni broj oblika: ", "Nije dobar odabir!", 1, oblici.size());
 		Oblik o = oblici.get(index-1);
-		o.setId(Pomocno.unosRasponBroja("Unesi šifru oblika (" + o.getId() + "): ", "Nije dobar odabir!", 1, oblici.size()));
+		o.setId(oblici.get(index-1).getId());
 		o.setNaziv(Pomocno.unosString("Unesi naziv oblika (" + o.getNaziv() + "): ","Nije dobar odabir!" ));
 		
 	}

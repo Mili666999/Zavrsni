@@ -11,11 +11,18 @@ public class AOL extends Entitet {
 		
 	}
 
+	public AOL(int id, float kolicinaNaLokaciji, Oblik oblici, Lokacija lokacije) {
+		super(id);
+		this.kolicinaNaLokaciji = kolicinaNaLokaciji;
+		this.oblici = oblici;
+		this.lokacije = lokacije;
+	}
+
+
 	public float getKolicinaNaLokaciji() {
 		return kolicinaNaLokaciji;
 	}
 
-	
 	public void setKolicinaNaLokaciji(float kolicinaNaLokaciji) {
 		this.kolicinaNaLokaciji = kolicinaNaLokaciji;
 	}

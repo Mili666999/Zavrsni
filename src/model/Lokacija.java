@@ -8,9 +8,9 @@ public class Lokacija extends Entitet {
 	public Lokacija() {
 		
 	}
-	
-	public Lokacija(String naziv) {
-		super();
+
+	public Lokacija(int id, String naziv) {
+		super(id);
 		this.naziv = naziv;
 	}
 

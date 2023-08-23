@@ -28,14 +28,15 @@ public class ObradaAOL {
 
 	public AOL dodavanjeAOL() {
 		AOL a = new AOL();
-		a.setId(artikli.size()-1);
+		//a.setId(artikli.size()-1);
+		System.out.println("Unesi oblik lijeka...");
+		izbornik.getObradaOblik().pregledOblika();
+		a.setOblici(ucitavanjeOblika());
 		System.out.println("Unesi lokaciju lijeka...");
 		izbornik.getObradaLokacija().pregledLokacija();
 		a.setLokacije(ucitavanjeLokacija());
 		a.setKolicinaNaLokaciji(Pomocno.unosFloat("Unesi količinu na lokaciji (. za decimalni dio): ", "Greška kod unosa!"));
-		System.out.println("Unesi oblik lijeka...");
-		izbornik.getObradaOblik().pregledOblika();
-		a.setOblici(ucitavanjeOblika());
+		
 		return a;
 	}
 

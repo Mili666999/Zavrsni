@@ -8,9 +8,9 @@ public class Oblik extends Entitet {
 	public Oblik() {
 		
 	}
-	
-	public Oblik(String naziv) {
-		super();
+
+	public Oblik(int id, String naziv) {
+		super(id);
 		this.naziv = naziv;
 	}
 

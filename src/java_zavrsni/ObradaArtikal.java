@@ -10,6 +10,7 @@ import model.Kategorija;
 
 public class ObradaArtikal {
 	
+	private int id = 1;
 	private List<Artikal> artikli;
 	private List<AOL> aoli;
 	private Izbornik izbornik;
@@ -66,15 +67,14 @@ public class ObradaArtikal {
 		System.out.println("\n-POPIS ARTIKALA-");
 		int b=1;
 		for(Artikal a : artikli) {
-			System.out.println(b++ + ". " + a.getNaziv() + "/" + a.getKolicinaUkupna() + "/" + a.getKategorije().toString().replace("[","" ).replace("]", "") +"/"
-			+ a.getAol());
+			System.out.println(b++ + ". " + a.getNaziv() + "/" + a.getKolicinaUkupna() + "/" + a.getKategorije().toString().replace("[","" ).replace("]", "") + "/");
 		}
 		System.out.println("*****************");
 	}
 
 	private void dodavanjeArtikla() {
 		Artikal a = new Artikal();
-		a.setId(Pomocno.unosRasponBroja("Unesi šifru artikla: ", "Pozitivan broj!", 1, Integer.MAX_VALUE));
+		a.setId(id++);
 		a.setNaziv(Pomocno.unosString("Unesi naziv artikla: ", "Naziv obavezan!"));
 		a.setKolicinaUkupna(Pomocno.unosFloat("Unesi ukupnu količinu (. za decimalni dio): ", "Greška kod unosa!"));
 		System.out.println("Unesi kategoriju...");
@@ -116,7 +116,7 @@ public class ObradaArtikal {
 		pregledArtikala();
 		int index = Pomocno.unosRasponBroja("Unesi redni broj artikla: ", "Nije dobar odabir", 1, artikli.size());
 		Artikal a = artikli.get(index-1);
-		a.setId(Pomocno.unosRasponBroja("Unesi šifru artikla: (" + a.getId() + "): ", "Nije dobar odabir!", 1, artikli.size()));
+		a.setId(artikli.get(index-1).getId());
 		a.setNaziv(Pomocno.unosString("Unesi naziv artikla (" + a.getNaziv() + "): ", "Naziv obavezan!"));
 		a.setKolicinaUkupna(Pomocno.unosFloat("Unesi ukupnu količinu (. za decimalni dio): (" + a.getKolicinaUkupna() + "): ", "Greška kod unosa!"));
 		System.out.println("Unesi kategoriju...");

@@ -7,6 +7,7 @@ import model.Lokacija;
 
 public class ObradaLokacija {
 	
+	private int id = Pomocno.DEV ? 4 : 1;
 	private List<Lokacija> lokacije;
 	
 	public List<Lokacija> getLokacije() {
@@ -21,9 +22,9 @@ public class ObradaLokacija {
 	}
 	
 	private void testisi() {
-		lokacije.add(new Lokacija("Ormar"));
-		lokacije.add(new Lokacija("Hladnjak"));
-		lokacije.add(new Lokacija("Ordinacija"));
+		lokacije.add(new Lokacija(1,"Ormar"));
+		lokacije.add(new Lokacija(2,"Hladnjak"));
+		lokacije.add(new Lokacija(3,"Ordinacija"));
 	}
 
 	public void prikaziIzbornik() {
@@ -70,7 +71,7 @@ public class ObradaLokacija {
 	
 	public void dodavanjeLokacije() {
 		Lokacija l = new Lokacija();
-		l.setId(Pomocno.unosRasponBroja("Unesi šifru lokacije: ", "Pozitivan broj!", 1, Integer.MAX_VALUE));
+		l.setId(id++);
 		l.setNaziv(Pomocno.unosString("Unesi naziv lokacije: ", "Naziv obavezan!"));
 		lokacije.add(l);
 	}
@@ -79,7 +80,7 @@ public class ObradaLokacija {
 		pregledLokacija();
 		int index = Pomocno.unosRasponBroja("Odaberi redni broj lokacije: ", "NIje dobar odabir!", 1, lokacije.size());
 		Lokacija l = lokacije.get(index-1);
-		l.setId(Pomocno.unosRasponBroja("Unesi šifru lokacije (" + l.getId() + "): ", "Nije dobar odabir!", 1, lokacije.size()));
+		l.setId(lokacije.get(index-1).getId());
 		l.setNaziv(Pomocno.unosString("Unesi naziv lokacije (" + l.getNaziv() + "): ", "Nije dobar odabir!"));
 	}
 	

@@ -7,6 +7,7 @@ import model.Kategorija;
 
 public class ObradaKategorija {
 	
+	private int id = Pomocno.DEV ? 4 : 1;
 	private List<Kategorija> kategorije;
 	
 	public List<Kategorija> getKategorije(){
@@ -21,9 +22,9 @@ public class ObradaKategorija {
 	}	
 	
 	private void testisi() {
-		kategorije.add(new Kategorija("Lijekovi"));
-		kategorije.add(new Kategorija("Dezinfekcija"));
-		kategorije.add(new Kategorija("Oštri predmeti"));
+		kategorije.add(new Kategorija(1,"Lijekovi"));
+		kategorije.add(new Kategorija(2,"Dezinfekcija"));
+		kategorije.add(new Kategorija(3,"Oštri predmeti"));
 	}
 
 	public void prikaziIzbornik() {
@@ -70,7 +71,7 @@ public class ObradaKategorija {
 
 	public void dodavanjeKategorije() {
 		Kategorija k = new Kategorija();
-		k.setId(Pomocno.unosRasponBroja("Unesi šifru kategorije: ", "Pozitivan broj!", 1, Integer.MAX_VALUE));
+		k.setId(id++);
 		k.setNaziv(Pomocno.unosString("Unesi naziv kategorije: ","Naziv obavezan!"));
 		kategorije.add(k);
 	}
@@ -79,7 +80,7 @@ public class ObradaKategorija {
 		pregledKategorija();
 		int index = Pomocno.unosRasponBroja("Odaberi redni broj kategorije: " , "Nije dobar odabir!", 1, kategorije.size());
 		Kategorija k = kategorije.get(index-1);
-		k.setId(Pomocno.unosRasponBroja("Unesi šifru kategorije (" + k.getId() + "): ", "Pozitivan broj!", 1, Integer.MAX_VALUE));
+		k.setId(kategorije.get(index-1).getId());
 		k.setNaziv(Pomocno.unosString("Unesi naziv kategorije (" + k.getNaziv() + "): ", "Naziv obavezan!"));
 	}
 	
