@@ -66,7 +66,8 @@ public class ObradaArtikal {
 		System.out.println("\n-POPIS ARTIKALA-");
 		int b=1;
 		for(Artikal a : artikli) {
-			System.out.println(b++ + ". " + a.getNaziv() + "/" + a.getKolicinaUkupna() + "/" + a.getKategorije().toString().replace("[","" ).replace("]", ""));
+			System.out.println(b++ + ". " + a.getNaziv() + "/" + a.getKolicinaUkupna() + "/" + a.getKategorije().toString().replace("[","" ).replace("]", "") +"/"
+			+ a.getAol());
 		}
 		System.out.println("*****************");
 	}
@@ -85,11 +86,10 @@ public class ObradaArtikal {
 			aols.add(izbornik.getObradaAOL().dodavanjeAOL());
 			
 			a.setAol(aols);
-			// ugraditi da li želite dodati još
+			if(Pomocno.unosRasponBroja("\nŽelite li dodati artikal na još koju lokaciju? (1-DA, 2-NE): ", "Nije dobar odabir!", 1, 2)==1) {
+				aols.add(izbornik.getObradaAOL().dodavanjeAOL());
+			}
 		}
-		
-		
-		
 		artikli.add(a);
 	}
 	

@@ -13,44 +13,37 @@ public class Artikal extends Entitet  {
 		
 	}
 
-
-
-
 	public String getNaziv() {
 		return naziv;
 	}
+	
+	
 	public void setNaziv(String naziv) {
 		this.naziv = naziv;
 	}
+	
 	public float getKolicinaUkupna() {
 		return kolicinaUkupna;
 	}
+	
 	public void setKolicinaUkupna(float kolicinaUkupna) {
 		this.kolicinaUkupna = kolicinaUkupna;
 	}
+	
 	public List<Kategorija> getKategorije() {
 		return kategorije;
 	}
+	
 	public void setKategorije(List<Kategorija> kategorije) {
 		this.kategorije = kategorije;
 	}
-
-
-
-
+	
 	public List<AOL> getAol() {
 		return aol;
 	}
-
-
-
-
+	
 	public void setAol(List<AOL> aol) {
 		this.aol = aol;
 	}
 
-
-
-
-	
 }

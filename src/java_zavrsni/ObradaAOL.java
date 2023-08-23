@@ -11,12 +11,10 @@ import model.Oblik;
 public class ObradaAOL {
 	
 	private Izbornik izbornik;
-	private List<AOL> aoli;
 	private List<Artikal> artikli;
 	
 	
 	public ObradaAOL() {
-		aoli = new ArrayList<>();
 		artikli = new ArrayList<>();
 		
 	}
@@ -58,11 +56,8 @@ public class ObradaAOL {
 	
 	private Lokacija ucitavanjeLokacija() {
 		if(Pomocno.unosRasponBroja("Koristi postojeću - 1, Dodati novu - 2: ", "NIje dobar odabir!", 1, 2)!=1) {
-		
 			izbornik.getObradaLokacija().dodavanjeLokacije();
-		
 		}
-		
 		return postaviLokaciju();
 
 	}

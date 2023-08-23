@@ -1,6 +1,5 @@
 package model;
 
-import java.util.List;
 
 public class AOL extends Entitet {
 	
@@ -16,6 +15,7 @@ public class AOL extends Entitet {
 		return kolicinaNaLokaciji;
 	}
 
+	
 	public void setKolicinaNaLokaciji(float kolicinaNaLokaciji) {
 		this.kolicinaNaLokaciji = kolicinaNaLokaciji;
 	}
